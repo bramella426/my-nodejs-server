@@ -17,18 +17,18 @@
 
      
  // [START app]
- const path = require('path');
+ //const path = require('path');
  const express = require('express');
- const bodyParser = require('body-parser');
+ //const bodyParser = require('body-parser');
  const app = express();
  
- app.use(bodyParser.urlencoded({ extended: true }));
+ //app.use(bodyParser.urlencoded({ extended: true }));
  
  app.get('/', (req, res) => {
    res.send('Hello from App Engine!');
  });
 
- app.get('/submit', (req, res) => {
+ /*app.get('/submit', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/form.html'));
  });
 
@@ -38,12 +38,12 @@
     message: req.body.message
   });
   res.send('Thanks for your message!');
- });
+ });  */
  
  // Listen to the App Engine-specified port, or 8080 otherwise
  const PORT = process.env.PORT || 8080;
  app.listen(PORT, () => {
-   console.log(`Node js Server listening on port ${PORT}...`);
+   console.log(`Server listening on port ${PORT}...`);
  });
  // [END app]
  
